@@ -55,7 +55,7 @@ Ao longo do semestre, serão desenvolvidos exercícios e projetos utilizando **J
 📦 desenvolvimento-de-sistemas
  ┣ 📂 atividades
  ┣ 📂 aulas
- ┣ 📂 projeto-final
+ ┣ 📂 guias
  ┗ 📄 README.md
 ```
 
@@ -72,6 +72,13 @@ Registrar minha evolução durante a disciplina, praticando:
 * uso de Git e GitHub.
 
 ---
+
+##  Observação
+
+Os materiais disponibilizados pelo professor durante a disciplina (como slides e apostilas) não são publicados neste repositório por respeito aos direitos autorais.
+
+---
+
 <div align="center">
 
 ### 💗 Repositório em construção
