@@ -23,4 +23,8 @@ public class CadastroAlunos {
         }
         return null;
     }
+    public int contarAlunos() {
+        return alunos.size();
+    }
+
 }

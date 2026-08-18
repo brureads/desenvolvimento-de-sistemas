@@ -28,7 +28,7 @@ public class TelaCadastroAluno extends JFrame {
 
     private void criarComponentes() {
 
-        JPanel painel = new JPanel(new GridLayout(5, 2, 5, 5));
+        JPanel painel = new JPanel(new GridLayout(6, 2, 5, 5));
 
         campoNome = new JTextField();
         campoCurso = new JTextField();
@@ -41,6 +41,7 @@ public class TelaCadastroAluno extends JFrame {
         JButton botaoListar = new JButton("Listar");
         JButton botaoBuscar = new JButton("Buscar por nome");
         JButton botaoLimpar = new JButton("Limpar campos");
+        JButton botaoTotal = new JButton("Total de alunos");
 
         painel.add(new JLabel("Nome:"));
         painel.add(campoNome);
@@ -57,6 +58,8 @@ public class TelaCadastroAluno extends JFrame {
         painel.add(botaoBuscar);
         painel.add(botaoLimpar);
 
+        painel.add(botaoTotal);
+
         add(painel, BorderLayout.NORTH);
         add(new JScrollPane(areaResultado), BorderLayout.CENTER);
 
@@ -64,6 +67,7 @@ public class TelaCadastroAluno extends JFrame {
         botaoListar.addActionListener(e -> listarAlunos());
         botaoBuscar.addActionListener(e -> buscarAluno());
         botaoLimpar.addActionListener(e -> limparCampos());
+        botaoTotal.addActionListener(e -> mostrarTotalAlunos());
     }
 
     private void cadastrarAluno() {
@@ -95,7 +99,7 @@ public class TelaCadastroAluno extends JFrame {
         cadastro.adicionar(aluno);
 
         areaResultado.setText(
-            "Aluno cadastrado: " + aluno.gerarResumo()
+                "Aluno cadastrado: " + aluno.gerarResumo()
         );
 
         limparCampos();
@@ -140,5 +144,12 @@ public class TelaCadastroAluno extends JFrame {
         campoSemestre.setText("");
 
         campoNome.requestFocus();
+    }
+
+    private void mostrarTotalAlunos() {
+
+        areaResultado.setText(
+                "Total de alunos: " + cadastro.contarAlunos()
+        );
     }
 }
